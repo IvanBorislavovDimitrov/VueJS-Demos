@@ -10,8 +10,17 @@
 
     <div id="vue-app">
         <h1>{{ greet('morning') }}</h1>
+        <a v-bind:href="website">Google</a>
+        <input type="text" v-bind:value="name">
+        <p v-html="websiteTag"></p>
         <p>Name: {{ name }}</p>
         <p>Job: {{ job }}</p>
+
+        <h1>-----------------------------</h1>
+        <p>My age is {{ age }}</p>
+        <button v-on:click="add(age)">Add age</button>
+        <button v-on:click="subtract(age)">Remove age</button>
+        <div id="canvas" v-on:mousemove="updateMouse"> {{ x }}, {{ y }}</div>
     </div>
 </body>
 </html>
