@@ -15,12 +15,34 @@
         <p v-html="websiteTag"></p>
         <p>Name: {{ name }}</p>
         <p>Job: {{ job }}</p>
-
         <h1>-----------------------------</h1>
         <p>My age is {{ age }}</p>
-        <button v-on:click="add(age)">Add age</button>
-        <button v-on:click="subtract(age)">Remove age</button>
-        <div id="canvas" v-on:mousemove="updateMouse"> {{ x }}, {{ y }}</div>
+        <button v-on:click.once="add(1)">Add one year</button>
+        <button v-on:click="subtract(1)">Remove one year</button>
+        <button v-on:dblclick="add(10)">Add 10 years</button>
+        <button v-on:dblclick="subtract(10)">Remove 10 years</button>
+        <p><a v-on:click.prevent="click()" href="">Click</a></p>
+        <input type="text" v-on:keyup="add(1)">
+        <input type="text" v-on:keyup.enter="subtract(1)">
+        <h1>-----------------------------</h1>
+        <form>
+            <p><input type="text" v-model="username"></p>
+            <p><input type="text" v-model="password"></p>
+        </form>
+        <a v-bind:href="computed">Go to computed properties</a>
+
+        <h3>{{ username }}</h3>
+        <h3>{{ password }}</h3>
+        <div v-bind:class="{red: true}">Herro colour</div>
+        <h1>-----------------------------</h1>
+        <h1>Conditionals</h1>
+        <button v-on:click="error = !error">Toggle error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <h1 v-if="error">Error occurred</h1>
+        <h1 v-else-if="success">Success</h1>
+        <p>
+           <!-- <div id="canvas" v-on:mousemove="updateMouse"> {{ x }}, {{ y }}</div>-->
+        </p>
     </div>
 </body>
 </html>

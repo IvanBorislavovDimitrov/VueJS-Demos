@@ -8,21 +8,29 @@ window.onload = () => {
             websiteTag: '<a href="https://google.com">Tuka nqma</a>',
             age: 22,
             x: 0,
-            y: 0
+            y: 0,
+            username: '',
+            password: '',
+            computed: '/computed.html',
+            error: false,
+            success: false
         },
         methods: {
             greet: function () {
                 return `Greetings ${this.name}`;
             },
-            add: function() {
-                this.age++;
+            add: function(years) {
+                this.age += years;
             },
-            subtract: function() {
-                this.age--;
+            subtract: function(years) {
+                this.age -= years;
             },
             updateMouse: function(event) {
                 this.x = event.offsetX;
                 this.y = event.offsetY;
+            },
+            click: function() {
+                alert('Do not trust anybody!!!')
             }
         }
      });
