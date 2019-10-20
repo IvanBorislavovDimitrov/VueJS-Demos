@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VueJS Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <script src="app.js"></script>
+    <div id="vue-app">
+        <div id="bag" v-bind:class="{ burst: ended }"></div>
+        <div id="bag-health">
+            <div v-bind:style="{ width: health + '%' }"></div>
+        </div>
+        <div id="controls">
+            <button v-show="!ended" v-on:click="punch">Punch</button>
+            <button v-on:click="reset">Reset</button>
+        </div>
+    </div>
+</body>
+</html>
