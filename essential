@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=yP5Tu3S_FtU&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa&index=19
+
+vue init webpack-simple <project_name>
+cd <project_name>
+npm install
+npm run dev
