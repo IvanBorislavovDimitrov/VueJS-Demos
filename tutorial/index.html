@@ -40,9 +40,24 @@
         <button v-on:click="success = !success">Toggle Success</button>
         <h1 v-if="error">Error occurred</h1>
         <h1 v-else-if="success">Success</h1>
+        <p v-show="error">Error occurred</p>
+        <p v-show="success">Success horray</p>
+        <h1>-----------------------------</h1>
+        <ul>
+            <li v-for="character in characters">{{ character }}</li>
+        </ul>   
+        <ul>
+            <li v-for="(ninja, index) in ninjas">{{ index }}.{{ ninja.name }} is {{ ninja.age }}</li>
+        </ul>  
+        <template v-for="character in characters">
+            <h3>{{ character }}</h3>
+        </template>   
         <p>
-           <!-- <div id="canvas" v-on:mousemove="updateMouse"> {{ x }}, {{ y }}</div>-->
+           <div id="canvas" v-on:mousemove="updateMouse"> {{ x }}, {{ y }}</div>
         </p>
+
+
+        
     </div>
 </body>
 </html>

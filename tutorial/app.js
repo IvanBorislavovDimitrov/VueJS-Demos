@@ -13,7 +13,13 @@ window.onload = () => {
             password: '',
             computed: '/computed.html',
             error: false,
-            success: false
+            success: false,
+            characters: ['mitko painera', 'pesho', 'kondio', 'djamaikata'],
+            ninjas: [
+                {name: 'petko', age: 18},
+                {name: 'gogo', age: 20},
+                {name: 'ustata', age: 30}
+            ]
         },
         methods: {
             greet: function () {
