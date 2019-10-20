@@ -8,7 +8,9 @@
 <body>
     <script src="app.js"></script>
     <div id="vue-app">
-        
+        <input type="text" ref="username"/>
+        <button v-on:click="readUsername">Read username</button>
+        <h1>Your username: {{ output }}</h1>
     </div>
 </body>
 </html>
